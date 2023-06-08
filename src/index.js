@@ -9,6 +9,7 @@ import {
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import HomeScreen from './screens/Home/HomeScreen';
+import ProductDetails from './screens/ProductDetails/ProductDetails';
 
 import './assets/styles/bootstrap.custom.css';
 import './assets/styles/index.css';
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route path='/' element={<App />}>
 			<Route index={true} path='/' element={<HomeScreen />} />
+			<Route path='/product/:id' element={<ProductDetails />} />
 		</Route>
 	)
 );
